@@ -219,11 +219,9 @@ body {
 
 @media only screen and (min-width:768px) and (max-width: 1157px) {
     .address-list {
-        display: block;
-    }
-
-    .adress-item:not(:last-child) {
-        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .header-item {
@@ -231,7 +229,16 @@ body {
     }
 
     .headr-adress {
-        padding-top: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mail-tel {
+        font-size: 12px;
+        line-height: 1.5;
+
+        color: var(--body-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
@@ -239,18 +246,14 @@ body {
     .mail-tel {
         padding: 24px 0;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        color: var(--body-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
-.mail-tel {
-    display: block;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--body-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .mail-tel:focus,
 .mail-tel:hover {
@@ -642,9 +645,9 @@ body {
     padding-bottom: 96px;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:1157px) {
     .container-customers {
-        max-width: 582px;
+        max-width: 584px;
     }
 }
 
@@ -677,7 +680,6 @@ body {
 
 @media only screen and (min-width:768px) {
     .list-customers {
-        width: 552px;
         row-gap: 72px;
         column-gap: 24px;
         margin: 0 auto;
@@ -692,6 +694,8 @@ body {
 }
 
 .item-customers {
+    display: flex;
+    justify-content: center;
     flex-basis: calc((100% - 16px) / 2);
 }
 
@@ -765,7 +769,7 @@ body {
 
 @media only screen and (min-width:768px) and (max-width: 1157px) {
     .cont-footer {
-        width: 552px;
+        width: 584px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -830,14 +834,8 @@ body {
 
 .list-icons-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 16px;
-}
-
-@media only screen and (max-width:767px) {
-    .item-icons-footer {
-        margin-bottom: 72px;
-    }
 }
 
 .link-icons-footer {
@@ -908,8 +906,10 @@ body {
 }
 
 @media only screen and (max-width:767px) {
-    .subscribe-form-input {
-        margin-bottom: 16px;
+    .subscribe-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 }
 
@@ -1313,8 +1313,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.activ:hover,
-.activ:focus {
+.mobile-menu-link.active {
     color: var(--btn-hover-color);
 }
 
